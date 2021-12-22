@@ -1,4 +1,4 @@
-# TALKIE (TRY SOCKET.IO)
+# TALKIE
 
 <img width="727" alt="Talkie Screenshot" src="https://user-images.githubusercontent.com/37777232/147014610-d3a71434-a064-4136-83f6-349bc43a672b.png">
 
@@ -15,8 +15,8 @@
 ## Installation
 
 ```bash
-git clone https://github.com/aaronthangnguyen/talkie-try-socketio
-cd talkie-try-socketio
+git clone https://github.com/aaronthangnguyen/talkie
+cd talkie
 ```
 
 ```bash
