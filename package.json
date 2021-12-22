@@ -4,14 +4,15 @@
   "description": "Try Socket.IO",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --es-module-specifier-resolution=node index.js"
+    "start": "PORT=3002 node --es-module-specifier-resolution=node index.js",
+    "dev": "PORT=4002 nodemon --es-module-specifier-resolution=node index.js"
   },
   "dependencies": {
     "express": "^4.17.2",
-    "nodemon": "^2.0.15",
     "socket.io": "^4.4.0"
   },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "nodemon": "^2.0.15"
   }
 }
