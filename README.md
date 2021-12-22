@@ -1,6 +1,6 @@
 # TALKIE (TRY SOCKET.IO)
 
-![Talkie Screenshot](https://user-images.githubusercontent.com/37777232/147014484-3e071a9d-a5b6-4534-832d-e4834449b7eb.png)
+<img width="727" alt="Talkie Screenshot" src="https://user-images.githubusercontent.com/37777232/147014610-d3a71434-a064-4136-83f6-349bc43a672b.png">
 
 
 ## Technologies
