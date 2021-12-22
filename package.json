@@ -1,0 +1,17 @@
+{
+  "name": "try-socketio",
+  "version": "0.0.1",
+  "description": "Try Socket.IO",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --es-module-specifier-resolution=node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}

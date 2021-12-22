@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="public/spectre.min.css" />
+  <link rel="stylesheet" href="public/style.css" />
+  <title>Talkie</title>
+</head>
+
+<body>
+  <main>
+    <div id="conversation-container">
+      <h1>Talkie</h2>
+        <ul id="message-list"></ul>
+    </div>
+    <form id="form-container">
+      <input type="text" id="text-input" class="form-input" placeholder="Say something..." />
+      <button type="submit" id="send-button" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-send"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+        </svg>
+        &nbsp;&nbsp;Send</button>
+    </form>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    const messageList = document.getElementById("message-list");
+    const form = document.getElementById("form-container");
+    const input = document.getElementById("text-input");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (input.value) {
+        socket.emit("message", input.value)
+        input.value = "";
+        input.focus()
+      }
+    })
+
+    socket.on("message", messageContent => {
+      const item = document.createElement("li")
+      item.innerHTML = `<span>${messageContent}</span>`
+      messageList.appendChild(item)
+    })
+  </script>
+</body>
+
+</html>
