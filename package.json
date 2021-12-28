@@ -1,11 +1,11 @@
 {
-  "name": "try-socketio",
-  "version": "0.0.1",
-  "description": "Try Socket.IO",
+  "name": "talkie",
+  "version": "0.0.2",
+  "description": "talkie",
   "type": "module",
   "scripts": {
-    "start": "PORT=3002 node --es-module-specifier-resolution=node index.js",
-    "dev": "PORT=4002 nodemon --es-module-specifier-resolution=node index.js"
+    "start": "PORT=3002 node --es-module-specifier-resolution=node app.js",
+    "dev": "PORT=4002 nodemon --es-module-specifier-resolution=node app.js"
   },
   "dependencies": {
     "express": "^4.17.2",
