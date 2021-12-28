@@ -9,19 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="public/spectre.min.css" />
-  <link rel="stylesheet" href="public/style.css" />
+  <link rel="stylesheet" href="/styles/spectre.min.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
   <title>Talkie</title>
 </head>
 
 <body>
   <main>
     <div id="conversation-container">
-      <h1>Talkie</h2>
-        <ul id="message-list"></ul>
+      <h1>Talkie</h1>
+      <ul id="message-list" style="max-height: 100%; overflow:auto;"></ul>
     </div>
     <form id="form-container">
-      <input type="text" id="text-input" class="form-input" placeholder="Say something..." />
+      <input type="text" id="username-input" class="form-input" value="Anonymous" placeholder="Name" />
+      <input type="text" id="message-input" class="form-input" placeholder="Say something..." />
       <button type="submit" id="send-button" class="btn btn-primary">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-send"
           viewBox="0 0 16 16">
@@ -32,28 +33,9 @@
     </form>
   </main>
   <script src="/socket.io/socket.io.js"></script>
+  <script src="/scripts/index.js"></script>
   <script>
-    const socket = io();
 
-    const messageList = document.getElementById("message-list");
-    const form = document.getElementById("form-container");
-    const input = document.getElementById("text-input");
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (input.value) {
-        socket.emit("message", input.value)
-        input.value = "";
-        input.focus()
-      }
-    })
-
-    socket.on("message", messageContent => {
-      const item = document.createElement("li")
-      item.innerHTML = `<span>${messageContent}</span>`
-      messageList.appendChild(item)
-    })
   </script>
 </body>
 
