@@ -20,6 +20,7 @@ h1 {
 
 ul {
   list-style-type: none;
+  margin: 0;
 }
 
 li {
@@ -28,14 +29,14 @@ li {
 
 li div {
   width: fit-content;
+  max-width: 80ch;
   background-color: #edf2f7;
   padding: 0.5rem;
   border-radius: 0.5rem 0.5rem 0.5rem 0;
 }
 
-li div div {
-  width: 80vw;
-  word-wrap: break-word;
+li div span {
+  word-break: break-word;
 }
 
 #conversation-container {

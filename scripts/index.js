@@ -20,6 +20,6 @@ form.addEventListener("submit", (event) => {
 
 socket.on("message", ({ username, messageContent }) => {
   const item = document.createElement("li");
-  item.innerHTML = `<div><b>${username}:</b> <div>${messageContent}</div>`;
+  item.innerHTML = `<div><b>${username}:</b> <span>${messageContent}<span></div>`;
   messageList.appendChild(item);
 });
