@@ -1,6 +1,6 @@
 # TALKIE
 
-<img width="727" alt="Talkie Screenshot" src="https://user-images.githubusercontent.com/37777232/147014610-d3a71434-a064-4136-83f6-349bc43a672b.png">
+<img width="714" alt="Screen Shot 2021-12-28 at 2 03 50 PM" src="https://user-images.githubusercontent.com/37777232/147598614-8ba627ca-01a0-4a08-b92b-81e148887a60.png">
 
 
 ## Technologies
