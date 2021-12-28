@@ -7,7 +7,8 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use("/public", express.static("public"));
+app.use("/styles", express.static("styles"));
+app.use("/scripts", express.static("scripts"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -20,8 +21,8 @@ io.on("connection", (socket) => {
   //   console.log("A person is disconnected");
   // });
 
-  socket.on("message", (messageContent) => {
-    io.emit("message", messageContent);
+  socket.on("message", (message) => {
+    io.emit("message", message);
   });
 });
 
