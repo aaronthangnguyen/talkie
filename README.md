@@ -25,4 +25,4 @@ pnpm i
 pnpm dev
 ```
 
-Go to http://localhost:3001 to try it out 🚀
+Go to http://localhost:3001/ to try it out 🚀
